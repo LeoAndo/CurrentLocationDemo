@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO STEP-1 位置情報を取得するアプリに必要なpermission定義を追加- START -->
+    <!-- TODO STEP-2 位置情報を取得するアプリに必要なpermission定義を追加- START -->
     <!-- およその位置情報: 位置情報の利用許可 -->
-<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- 正確な位置情報: 位置情報の利用許可 -->
-<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- END -->
 
     <application

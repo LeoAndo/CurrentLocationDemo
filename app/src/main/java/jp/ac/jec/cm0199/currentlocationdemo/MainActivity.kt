@@ -1,19 +1,21 @@
 package jp.ac.jec.cm0199.currentlocationdemo
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "MainActivity"
     }
 
-
-    // TODO STEP-5 オプトインの処理: 位置情報をの権限リクエスト - START
-    /*
+    // TODO STEP-6 オプトインの処理: 位置情報をの権限リクエスト - START
     private val fetchCurrentLocation =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
             Log.d(TAG, "granted: $granted")
@@ -28,11 +30,10 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
         }
-     */
     // END
 
-    // TODO STEP-4 位置情報取得サービスを呼び出す - START
-    // private lateinit var appLocationService: AppLocationService
+    // TODO STEP-5 位置情報取得サービスを呼び出す - START
+    private lateinit var appLocationService: AppLocationService
     // END
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,8 +46,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // TODO STEP-4 位置情報取得サービスを呼び出す - START
-        /*
+        // TODO STEP-5 位置情報取得サービスを呼び出す - START
         appLocationService = AppLocationService(this)
         appLocationService.locationResult.observe(this) {
             Log.d(TAG, "取得した位置情報:::::: $it")
@@ -54,13 +54,12 @@ class MainActivity : AppCompatActivity() {
         appLocationService.fetchError.observe(this) {
             Log.d(TAG, it)
         }
-         */
         // END
 
-        // TODO STEP-5 オプトインの処理: 位置情報をの権限リクエスト - START
-//        findViewById<Button>(R.id.button_current_location).setOnClickListener {
-//            fetchCurrentLocation.launch(android.Manifest.permission.ACCESS_FINE_LOCATION)
-//        }
+        // TODO STEP-6 オプトインの処理: 位置情報をの権限リクエスト - START
+        findViewById<Button>(R.id.button_current_location).setOnClickListener {
+            fetchCurrentLocation.launch(android.Manifest.permission.ACCESS_FINE_LOCATION)
+        }
         // END
     }
 }

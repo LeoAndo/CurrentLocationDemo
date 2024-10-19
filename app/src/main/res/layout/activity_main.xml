@@ -7,16 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--  TODO STEP-3 画面上にボタンを追加 - START   -->
-<!--    <Button-->
-<!--        android:id="@+id/button_current_location"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="現在地取得"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--  TODO STEP-4 画面上にボタンを追加 - START   -->
+    <Button
+        android:id="@+id/button_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="現在地取得"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <!-- END -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
